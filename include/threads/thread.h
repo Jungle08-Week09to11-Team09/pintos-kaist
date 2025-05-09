@@ -90,7 +90,9 @@ struct thread {
 	tid_t tid;                          /* Thread identifier. */
 	enum thread_status status;          /* Thread state. */
 	char name[16];                      /* Name (for debugging purposes). */
+  uint8_t *stack;                     /* 내가 추가함 */
 	int priority;                       /* Priority. */
+  struct list_elem allelem;           /* 내가 추가함 */  
 
 	/* Shared between thread.c and synch.c. */
 	struct list_elem elem;              /* List element. */
